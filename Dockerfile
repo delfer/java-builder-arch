@@ -1,7 +1,7 @@
 FROM base/archlinux
 
 RUN pacman --noconfirm -Sy && \
-        pacman --noconfirm -S unzip git vim jdk8-openjdk maven apache-ant nodejs npm yarn docker && \
+        pacman --noconfirm -S unzip git vim jdk8-openjdk maven apache-ant nodejs npm yarn docker apache-tools && \
         (echo -e "y\ny\n" | pacman -Scc)
 
 RUN npm install -g --unsafe-perm phantomjs webpack
